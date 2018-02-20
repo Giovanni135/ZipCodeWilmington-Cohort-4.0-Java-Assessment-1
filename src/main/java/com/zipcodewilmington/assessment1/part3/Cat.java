@@ -9,13 +9,16 @@ public class Cat extends Pet {
      * @param age age of this Cat
      */
     public Cat(String name, Integer age) {
-
+        //this.name = name;
+        //this.age = age;
+        // I don't understand how else to get this problem, and the above does not compile.
     }
 
     /**
      * @param age age of this Cat
      */
     public Cat(Integer age) {
+
     }
 
     /**
@@ -38,6 +41,7 @@ public class Cat extends Pet {
      * @return meow as a string
      */
     public String speak() {
-        return null;
+        String speak = "Meow";
+        return speak;
     }
 }

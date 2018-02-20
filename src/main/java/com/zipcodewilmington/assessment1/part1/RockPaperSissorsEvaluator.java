@@ -13,7 +13,13 @@ public class RockPaperSissorsEvaluator {
      * @return the respective winning move
      */
     public String getWinningMove(String handSign) {
-        return null;
+        if (handSign.equals(SCISSOR)) {
+            return ROCK;
+        } else if (handSign.equals(ROCK)) {
+            return PAPER;
+        } else {
+            return SCISSOR;
+        }
     }
 
     /**
@@ -21,7 +27,13 @@ public class RockPaperSissorsEvaluator {
      * @return the respective losing move
      */
     public String getLosingMove(String handSign) {
-        return null;
+        if (handSign.equals(SCISSOR)) {
+            return PAPER;
+        } else if (handSign.equals(ROCK)){
+            return SCISSOR;
+        } else {
+            return ROCK;
+        }
     }
 
     /**

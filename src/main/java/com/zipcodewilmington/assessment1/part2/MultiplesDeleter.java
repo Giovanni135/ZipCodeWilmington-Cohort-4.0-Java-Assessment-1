@@ -1,5 +1,8 @@
 package com.zipcodewilmington.assessment1.part2;
 
+import java.lang.reflect.Array;
+import java.util.ArrayList;
+
 /**
  * Created by leon on 2/16/18.
  */
@@ -10,7 +13,17 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with evens removed
      */
     public Integer[] deleteEvens(Integer[] ints) {
-        return null;
+        ArrayList<Integer> intList = new ArrayList<>();
+        for (Integer num : ints) {
+            if (num % 2 == 1) {
+                intList.add(num);
+            }
+        }
+        Integer[] intList2 = new Integer[intList.size()];
+        for (int i = 0; i < intList2.length; i++) {
+            intList2[i] = intList.get(i);
+        }
+        return intList2;
     }
 
     /**
@@ -19,7 +32,17 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with odds removed
      */
     public Integer[] deleteOdds(Integer[] ints) {
-        return null;
+        ArrayList<Integer> intList = new ArrayList<>();
+        for (Integer num : ints) {
+            if (num % 2 == 0) {
+                intList.add(num);
+            }
+        }
+        Integer[] intList2 = new Integer[intList.size()];
+        for (int i = 0; i < intList2.length; i++) {
+            intList2[i] = intList.get(i);
+        }
+        return intList2;
     }
 
     /**
@@ -28,16 +51,36 @@ public class MultiplesDeleter {
      * given an array of integers, named `ints` return an identical array with numbers indivisible by 3 removed
      */
     public Integer[] deleteMultiplesOf3(Integer[] ints) {
-        return null;
+        ArrayList<Integer> intList = new ArrayList<>();
+        for (Integer num : ints) {
+            if (num % 3 == 1) {
+                intList.add(num);
+            }
+        }
+        Integer[] intList2 = new Integer[intList.size()];
+        for (int i = 0; i < intList2.length; i++) {
+            intList2[i] = intList.get(i);
+        }
+        return intList2;
     }
 
     /**
-     * @param ints array of Integer objects
+     * @param ints     array of Integer objects
      * @param multiple the multiple to evaluate divisibility against
      * @return all ints which are not divisible by the `multiple` specified
      * given an array of integers, named `ints` return an identical array with numbers indivisible by `multiple` removed
      */
     public Integer[] deleteMultiplesOfN(Integer[] ints, int multiple) {
-        return null;
+        ArrayList<Integer> intList = new ArrayList<>();
+        for (Integer num : ints) {
+            if (num % multiple != 0) {
+                intList.add(num);
+            }
+        }
+        Integer[] intList2 = new Integer[intList.size()];
+        for (int i = 0; i < intList2.length; i++) {
+            intList2[i] = intList.get(i);
+        }
+        return intList2;
     }
 }

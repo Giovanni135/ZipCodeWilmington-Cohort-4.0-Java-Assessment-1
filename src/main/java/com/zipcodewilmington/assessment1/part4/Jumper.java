@@ -6,6 +6,8 @@ public class Jumper {
      * Complete the function below.
      */
     public int jumps(int k, int j) {
-        return -1;
+        int minJumps = k/j; //distance per jump
+        int movePerJump = k%j; // remainder to jump, since Bob can't overshoot his jumps. 3/2, etc.
+        return (minJumps + movePerJump);
     }
 }
